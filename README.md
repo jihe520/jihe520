@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @jihe520
 - 👀 I’m interested in music,movies,coding
-- 🌱 I’m currently learning cpp
+- 🌱 I’m currently learning cpp,godot,python,c#,java
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me 3265832331@qq.com
 
