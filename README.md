@@ -29,7 +29,12 @@ src="https://img.shields.io/twitter/follow/EqbymCi?logo=twitter&style=for-the-ba
 
 <b>My GitHub Stats</b>
 
-<a href="http://www.github.com/jihe520"><img src="https://github-readme-stats.vercel.app/api?username=jihe520&show_icons=true&hide=&count_private=true&title_color=6366f1&text_color=f97316&icon_color=6366f1&bg_color=27272a&hide_border=true&show_icons=true" alt="jihe520's GitHub stats" /></a>
 
-<a href="https://github.com/jihe520" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jihe520&langs_count=10&title_color=6366f1&text_color=f97316&icon_color=6366f1&bg_color=27272a&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" /></a>
+<a href="https://github.com/jihe520">
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=jihe520&show_icons=true&count_private=true&title_color=6366f1&text_color=f97316&icon_color=6366f1&bg_color=27272a&hide_border=true" />
+</a>
+
+<a href="https://github.com/jihe520">
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jihe520&langs_count=10&title_color=6366f1&text_color=f97316&icon_color=6366f1&bg_color=27272a&hide_border=true&locale=en&custom_title=Top%20Languages" />
+</a>
 
