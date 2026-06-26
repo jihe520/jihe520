@@ -8,7 +8,7 @@ Computer Student , love programming
 
 * 🌍  I'm based in Wuhan,China
 * ✉️  You can contact me at [jihencn@foxmail.com](mailto:jihencn@foxmail.com)
-* 🚧🚧🚧 portfolio(building): https://sanjin.xin
+
 <a href="https://www.x.com/EqbymCi" target="_blank" rel="noreferrer"><img
 src="https://img.shields.io/twitter/follow/EqbymCi?logo=twitter&style=for-the-badge&color=6366f1&labelColor=27272a"
 /></a>
