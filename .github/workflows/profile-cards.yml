@@ -24,25 +24,38 @@ jobs:
         with:
           ref: ${{ github.ref_name }}
 
-      - name: Generate stats card
-        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&title_color=6366f1&text_color=f97316&icon_color=6366f1&bg_color=27272a&hide_border=true
-          path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          core_version: 2.1.3
-          fail_on_error: "true"
+      - name: Fetch and validate public stats cards
+        env:
+          PROFILE_OWNER: ${{ github.repository_owner }}
+        run: |
+          # Keep a local snapshot so API downtime cannot break the profile.
+          staging="$RUNNER_TEMP/profile-cards"
+          mkdir -p "$staging"
+          base="https://github-stats-extended.vercel.app/api"
+          options="username=$PROFILE_OWNER&title_color=6366f1&text_color=f97316&icon_color=6366f1&bg_color=27272a&hide_border=true"
+          curl --fail --silent --show-error --location --retry 3 --retry-all-errors --max-time 60 \
+            "$base?$options&show_icons=true" -o "$staging/stats.svg"
+          curl --fail --silent --show-error --location --retry 3 --retry-all-errors --max-time 60 \
+            "$base/top-langs/?$options&langs_count=10&locale=en&custom_title=Top%20Languages" -o "$staging/top-langs.svg"
+          python3 - "$staging" <<'PY'
+          import sys
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
 
-      - name: Generate top languages card
-        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&langs_count=10&title_color=6366f1&text_color=f97316&icon_color=6366f1&bg_color=27272a&hide_border=true&locale=en&custom_title=Top%20Languages
-          path: profile/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          core_version: 2.1.3
-          fail_on_error: "true"
+          for name in ("stats.svg", "top-langs.svg"):
+              root = ET.parse(Path(sys.argv[1]) / name).getroot()
+              if root.tag != "{http://www.w3.org/2000/svg}svg":
+                  raise SystemExit(f"Invalid SVG: {name}")
+              text = " ".join(root.itertext()).lower()
+              if any(error in text for error in ("something went wrong", "maximum retries", "please add an env")):
+                  raise SystemExit(f"Stats service returned an error card: {name}")
+              expected = "total stars" if name == "stats.svg" else "top languages"
+              if expected not in text:
+                  raise SystemExit(f"Missing card data: {name}")
+              print(f"Validated {name}")
+          PY
+          mkdir -p profile
+          mv "$staging/stats.svg" "$staging/top-langs.svg" profile/
 
       - name: Commit updated cards
         env:
