@@ -31,10 +31,10 @@ src="https://img.shields.io/twitter/follow/EqbymCi?logo=twitter&style=for-the-ba
 
 
 <a href="https://github.com/jihe520">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=jihe520&show_icons=true&count_private=true&title_color=6366f1&text_color=f97316&icon_color=6366f1&bg_color=27272a&hide_border=true" />
+  <img src="./profile/stats.svg" alt="Sanjin's GitHub stats" />
 </a>
 
 <a href="https://github.com/jihe520">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jihe520&langs_count=10&title_color=6366f1&text_color=f97316&icon_color=6366f1&bg_color=27272a&hide_border=true&locale=en&custom_title=Top%20Languages" />
+  <img src="./profile/top-langs.svg" alt="Sanjin's top languages" />
 </a>
 
