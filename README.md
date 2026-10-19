@@ -4,9 +4,9 @@ Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-912
 Programmer
 ----------
 
-Computer Student , love programming
+Focus on AI Agent and Embodied AI
 
-* 🌍  I'm based in Wuhan,China
+* 🌍  I'm based in Beijing,China
 * ✉️  You can contact me at [jihencn@foxmail.com](mailto:jihencn@foxmail.com)
 
 <a href="https://www.x.com/EqbymCi" target="_blank" rel="noreferrer"><img
