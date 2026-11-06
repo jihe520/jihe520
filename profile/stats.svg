@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Sanjin&#39;s GitHub Stats, Rank: A-</title>
-        <desc id="descId">Total Stars Earned: 7926, Total Commits  (last year) : 245, Total PRs: 53, Total Issues: 28, Contributed to (last year): 6</desc>
+        <desc id="descId">Total Stars Earned: 7956, Total Commits  (last year) : 245, Total PRs: 53, Total Issues: 28, Contributed to (last year): 6</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 84.07657153972521;
+        stroke-dashoffset: 84.05056188442273;
       }
     }
   
@@ -169,7 +169,7 @@
         x="224.01"
         y="12.5"
         data-testid="stars"
-      >7.9k</text>
+      >8k</text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
